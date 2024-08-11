@@ -1,7 +1,7 @@
 #Creating an input variable
 variable "instance_type" {
   type = string
-  default = "t2.micro"
+  default = "t2.medium"
 }
 
 variable "azs" {
@@ -9,3 +9,8 @@ variable "azs" {
   default = [ "us-east-1a", "us-east-1b" ]
 }
 
+variable "aws_key_pair" {
+  type = string
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDToQ/L39VTU7sTDU8ojxDaIvTa/UJlrBq6sqKJYrQcKgFdPzUPoOBBvtHCViRhgYVrBxocLV8tnochESW4UCTi1SpW8ckGmMKhvrRWPUZ2p7DzBz9E6kN8Z6NZhdjHxck+MIplOzuQv0QdZBm+bBfpHSP6rfyiSoPbk4hgaemIfD4WEkvBF5UhF15AZIcNqE7oulMXB/zp4BPTdJhxZAENM/O12nqedKvggW1ybbwk6Sg54YSqEIp1YzrUqYaU00dh38/lB5aVnpbavkyaAt7k3F5H9Vr398xueQJgYlfQOoQh0Eh/nyMLymV/AgHmYDrQz97gMAM4BWKjfEU3EmzHZFVxMb8pMcR3D1OR6Y2q3JAT6rbTEKQIgIzDy97BKpT9KJxZyq2wge43yJ5D+yp0TkPZmCu2YRfnOScyKntS2QtCI2kot0kRBvno2m3zjM28c9Y4+m80DzCy4cAwNmOS4jRoMp/5kyjSJ61Bb5iwybWoahrhJxaEYarZMlPUMEM= ubuntu@ip-172-31-13-62"
+}
+ 
