@@ -56,7 +56,7 @@ resource "aws_key_pair" "ec2_key" {
 # Create EC2 instance the vpc_security_group_ids is refrence from the security resource, the subnet_id is refrence from the vpc module where [0] represent the first string of the public_subnet list. 
 #To enable public IP, we enable subnet_id to true.
 resource "aws_instance" "app_server" {
-  ami           = "ami-0f8e81a3da6e2510a"
+  ami           = "ami-0adec5a44d20e1466"
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.my_sg.id]
   key_name      = aws_key_pair.ec2_key.key_name
@@ -64,8 +64,8 @@ resource "aws_instance" "app_server" {
   associate_public_ip_address = true
  for_each = {
     k8s-control = "Instance-1"
-    k8s-worker1= "Instance-2"
-    k8s-worker2 = "Instance-3"
+    #k8s-worker1= "Instance-2"
+    #k8s-worker2 = "Instance-3"
   }
  tags = {
     Name = each.key
