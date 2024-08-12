@@ -3,7 +3,7 @@ terraform {
     organization = "Abingwas-Foundation"
 
     workspaces {
-      name = "Hyper-V_setup"
+      name = "Abingwa_CLI_Flow"
     }
   }
    required_providers {
