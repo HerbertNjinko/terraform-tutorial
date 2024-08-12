@@ -1,7 +1,7 @@
 #Creating an input variable
 variable "instance_type" {
   type = string
-  default = "t2.large"
+  default = "t2.Medium"
 }
 
 variable "azs" {

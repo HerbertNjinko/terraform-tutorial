@@ -6,13 +6,14 @@ terraform {
       name = "Hyper-V_setup"
     }
   }
-  required_providers {
-    hyperv = {
-      source  = "taliesins/hyperv"
-      version = ">= 1.0.3"
+   required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+       version = "~> 5.0"
     }
-  }
+   }
 }
-
-provider "hyperv" {
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-west-1"
 }
